@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <link rel="stylesheet" href="~/css/styles-merged.css">
+    <link rel="stylesheet" href="~/css/style.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .messageContainer {
+            display: none;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center inner-row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2 class="fw mb-3">Order List</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group text-md-center mt-10 mb-20">
+                        <input class="form-control" placeholder="Table No" name="table" />
+                    </div>
+                    <hr />
+                    <h3 class="form-group fw-bold text-decoration-none mb-20">
+                        Items:
+                    </h3>
+                    <section class="probootstrap-section probootstrap-bg-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="menus">
+                                        <li>
+                                            <figure class="image"><img src="~/img/margpizza.jpg" alt="Free Bootstrap Template by uicookies.com"></figure>
+                                            <div class="text">
+                                                <row class="price">
+                                                    $15.99
+                                                </row>
+                                                <h4>Margaritha Pizza</h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <figure class="image"><img src="~/img/Cheeseburger.jpg" alt="Free Bootstrap Template by uicookies.com"></figure>
+                                            <div class="text">
+                                                <span class="price">
+                                                    $24.99
+                                                </span>
+                                                <h4>Cheeseburger</h4>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr />
+                    <button onclick="DisplayMessage()" type="submit" class="btn btn-warning btn-block" style="color:white">
+                        Order
+                    </button>
+                    <!-- Message container -->
+                    <div id="messageContainer" class="messageContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function DisplayMessage() {
+            var messageContainer = document.getElementById('messageContainer');
+            messageContainer.innerHTML = 'Order has been received';
+            messageContainer.style.display = 'block';  // Show the container
+
+            setTimeout(function () {
+                messageContainer.style.display = 'none';  // Hide the container after 3 seconds
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
